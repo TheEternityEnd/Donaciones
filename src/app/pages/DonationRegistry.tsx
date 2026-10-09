@@ -17,9 +17,9 @@ import { FolioDetailDialog } from "../components/FolioDetailDialog";
 import { EditDonationDialog } from "../components/EditDonationDialog";
 import { useState } from "react";
 import { useData } from "../contexts/DataContext";
-import { API_URL } from "../components/data/Storage";
+import { storage } from "../components/data/Storage";
 import { toast } from "sonner";
-import { Folio } from "../data/mockData"; // 🌟 Importamos explícitamente el tipo Folio
+import { Folio } from "../data/mockData";
 
 const translations = {
   es: {
@@ -104,9 +104,8 @@ export function DonationRegistry() {
     if (!selectedFolio) return;
     try {
       const origId = selectedFolio.id || (selectedFolio as any).Folio;
-      const idStr = String(origId).replace("F-", "");
-      const res = await fetch(`${API_URL}/eliminar/${idStr}`, { method: "DELETE" }); // 🌟 Ajustado a ruta directa simplificada del proxy
-      if (!res.ok) throw new Error("Failed to delete");
+      const ok = await storage.eliminarRegistro(origId);
+      if (!ok) throw new Error("Failed to delete");
       toast.success(language === "es" ? "Registro eliminado" : "Registry deleted");
       window.dispatchEvent(new Event("donationsUpdated"));
     } catch (e) {

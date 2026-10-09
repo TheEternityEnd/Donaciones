@@ -182,5 +182,29 @@ export const storage = {
     async actualizarSolicitud(id_folio: number, nuevo_estado: 'ACTIVO' | 'CANCELADO'): Promise<boolean> {
         const response = await fetch(`${API_URL}/solicitudes/estado`, getFetchOptions('PUT', { id_folio, nuevo_estado }));
         return response.ok;
+    },
+
+    // --- ELIMINACIÓN Y EDICIÓN DE FOLIOS ---
+    /**
+     * Elimina un folio por su ID numérico.
+     */
+    async eliminarRegistro(id_folio: number | string): Promise<boolean> {
+        const idClean = String(id_folio).replace('F-', '');
+        const response = await fetch(`${API_URL}/eliminar/${idClean}`, getFetchOptions('DELETE'));
+        return response.ok;
+    },
+
+    /**
+     * Actualiza los datos de un folio y su detalle.
+     */
+    async actualizarRegistro(id_folio: number | string, payload: {
+        area_origen: string;
+        nombre_item: string;
+        cantidad: number;
+        observaciones_generales?: string;
+    }): Promise<boolean> {
+        const idClean = String(id_folio).replace('F-', '');
+        const response = await fetch(`${API_URL}/actualizar/${idClean}`, getFetchOptions('PUT', payload));
+        return response.ok;
     }
 };

@@ -36,8 +36,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (user) {
       updatePreferencesLocally(language, newTheme);
       try {
-        await fetch('http://localhost:5000/api/usuarios/ajustes', {
+        await fetch('/api/donaciones/usuarios/ajustes', {
           method: 'PUT',
+          credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             id_usuario: user.id_usuario,
@@ -57,8 +58,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (user) {
       updatePreferencesLocally(newLanguage, theme);
       try {
-        await fetch('http://localhost:5000/api/usuarios/ajustes', {
+        await fetch('/api/donaciones/usuarios/ajustes', {
           method: 'PUT',
+          credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             id_usuario: user.id_usuario,

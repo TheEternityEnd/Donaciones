@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { useTheme } from "../contexts/ThemeContext";
 import { Folio } from "../data/mockData";
 import { toast } from "sonner";
-import { API_URL } from "./data/Storage";
+import { storage } from "./data/Storage";
 
 interface EditDonationDialogProps {
   folio: Folio | null;
@@ -78,19 +78,14 @@ export function EditDonationDialog({ folio, open, onOpenChange }: EditDonationDi
     
     setLoading(true);
     try {
-      const idStr = folio.id.replace('F-', '');
-      const response = await fetch(`${API_URL}/actualizar/${idStr}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          area_origen: formData.origin,
-          nombre_item: formData.itemName,
-          cantidad: formData.quantity,
-          observaciones_generales: formData.donor ? `Donante: ${formData.donor}` : "Sin observaciones",
-        }),
+      const ok = await storage.actualizarRegistro(folio.id, {
+        area_origen: formData.origin,
+        nombre_item: formData.itemName,
+        cantidad: formData.quantity,
+        observaciones_generales: formData.donor ? `Donante: ${formData.donor}` : "Sin observaciones",
       });
 
-      if (!response.ok) throw new Error("Network response was not ok");
+      if (!ok) throw new Error("Network response was not ok");
 
       toast.success(t.success);
       window.dispatchEvent(new Event("donationsUpdated"));

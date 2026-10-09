@@ -12,10 +12,16 @@ export default defineConfig({
   // 🌟 CRUCIAL: Le dice a Vite que los assets se servirán desde /donaciones/
   base: '/donaciones/',
   
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      '/api':{
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false
+      }
+    }
+  },
   resolve: {
     alias: {
       // Alias @ to the src directory

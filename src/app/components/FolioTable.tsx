@@ -19,7 +19,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "./ui/alert-dialog";
-import { API_URL } from "./data/Storage";
+import { storage } from "./data/Storage";
 import { toast } from "sonner";
 import { useNavigate } from "react-router";
 
@@ -180,9 +180,8 @@ export function FolioTable({ folios, limit }: FolioTableProps) {
   const confirmDelete = async () => {
     if (!selectedFolio) return;
     try {
-      const idStr = selectedFolio.id.replace("F-", "");
-      const res = await fetch(`${API_URL}/eliminar/${idStr}`, { method: "DELETE" });
-      if (!res.ok) throw new Error("Failed to delete");
+      const ok = await storage.eliminarRegistro(selectedFolio.id);
+      if (!ok) throw new Error("Failed to delete");
       toast.success(language === "es" ? "Registro eliminado" : "Registry deleted");
       window.dispatchEvent(new Event("donationsUpdated"));
     } catch (e) {
