@@ -1,0 +1,356 @@
+[
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "talla_o_medida",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "id_usuario",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "tipo_movimiento",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "observaciones",
+    "data_type": "text"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "stock_minimo",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "id_historial",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "id_usuario",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "fecha_prestamo",
+    "data_type": "timestamp without time zone"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "estado",
+    "data_type": "boolean"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "devoluciones",
+    "column_name": "condicion_entrega",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "cantidad_disponible",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "descripcion",
+    "data_type": "text"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "documento_identidad",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "id_prestamo",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "cantidad_total",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "contrasena_hash",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "estado_condicion",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "detalle_prestamos",
+    "column_name": "id_articulo",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "estado_prestamo",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "devoluciones",
+    "column_name": "id_prestamo",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "correo_electronico",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "nombre_articulo",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "id_usuario",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "detalle_prestamos",
+    "column_name": "id_detalle",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "correo_electronico",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "id_articulo",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "fecha_creacion",
+    "data_type": "timestamp without time zone"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "tipo_medicamento",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "descripcion",
+    "data_type": "text"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "fecha_movimiento",
+    "data_type": "timestamp without time zone"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "sede",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "detalle_prestamos",
+    "column_name": "cantidad_prestada",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "concentracion",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "codigo_sku",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "fecha_registro",
+    "data_type": "timestamp without time zone"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "detalle_prestamos",
+    "column_name": "id_prestamo",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "img_url",
+    "data_type": "text"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "devoluciones",
+    "column_name": "id_usuario",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "cantidad",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "id_medicamento",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "devoluciones",
+    "column_name": "fecha_devolucion",
+    "data_type": "timestamp without time zone"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "nombre",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "nombre_completo",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "ubicacion",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "fecha_devolucion_esperada",
+    "data_type": "date"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "devoluciones",
+    "column_name": "id_devolucion",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "codigo_barras",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "direccion",
+    "data_type": "text"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "telefono",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "estante",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "usuarios",
+    "column_name": "rol",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "prestamos",
+    "column_name": "id_beneficiario",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "devoluciones",
+    "column_name": "observaciones",
+    "data_type": "text"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "id_beneficiario",
+    "data_type": "integer"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "nombre_completo",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "inventario",
+    "column_name": "categoria",
+    "data_type": "character varying"
+  },
+  {
+    "table_schema": "farmacia",
+    "table_name": "medicamentos",
+    "column_name": "activo",
+    "data_type": "boolean"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "beneficiarios",
+    "column_name": "estado",
+    "data_type": "boolean"
+  },
+  {
+    "table_schema": "ortopedia",
+    "table_name": "historial_inventario",
+    "column_name": "id_articulo",
+    "data_type": "integer"
+  }
+]
